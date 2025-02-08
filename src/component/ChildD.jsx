@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
-import { dataStore } from './ChildA'
+import { dataStore, store2 } from '../store';
+
 
 const ChildD = () => {
      let dd= useContext(dataStore);
-     console.log({dd},"child D");
+     let storedata= useContext(store2);
+     console.log({dd},"child D",{storedata});
      
   return (
     <div>

@@ -1,15 +1,21 @@
 import React, { useContext } from 'react'
-import { dataStore } from './ChildA'
+import { dataStore, store2 } from '../store';
+
 
 const ChildC = () => {
-    let data=useContext(dataStore)
-    console.log(data);
+    let {products}=useContext(dataStore)
+    console.log(products);
+    let data =[]
+    
+
+    
     
     
     
   return (
     <div>
-     {data.name}<br/>{data.age}<br/>{data.address}<br/>{data.city}<br/>{data.hobbies.map((val,idx)=>(<div key={idx}>val:{val}</div>))}
+    {products && products?.map((product)=>(<>{product?.title}{product.price}</>))}
+    
     </div>
   )
 }
