@@ -39,7 +39,7 @@ const Cart = () => {
 
   return (
 
-    <div className='w-[90vw] border bg-slate-50 ml-[70px] mb-3 mt-5'>
+    <div className='w-[90vw]  ml-[70px] mb-3 mt-5'>
       {cart && cart.length > 0 ?
         cart.map((item, index) => (
           <div key={index}>
