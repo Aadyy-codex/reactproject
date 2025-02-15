@@ -33,9 +33,8 @@ const ChildC = () => {
     
     
   return (
-    <div className =' flex flex-row flex-wrap'>
-    {products && products?.map((product)=>(<><div><div className='w-[20vw] border border-indigo-600'>{product?.title}{product.price}
-    <h1>{product.id}</h1>
+    <div className ='w-[100%] flex flex-row flex-wrap'>
+    {products && products?.map((product)=>(<><div><div className='w-[18.5vw] h-[55vh] border border-grey-600 ml-4 mb-5 rounded-sm bg-slate-50'>
     <img src={product.images[0]} className=' h-[300px]'></img>
     <button onClick={()=>addToCart(product)}>add to cart</button>
     </div>

@@ -4,6 +4,7 @@ import { store2 } from '../store'
 const Cart = () => {
 
     let {cart,setCart}= useContext(store2);
+    
     console.log(cart,"cart");
     const removeFromCart = (index) => {
         setCart(cart.filter((_, i) => i!== index))
@@ -33,8 +34,8 @@ const Cart = () => {
     }
     
   return (
-    
-    <div>
+
+    <div className='w-[90vw] border bg-slate-50 ml-[70px] mb-3 mt-5'>
       {cart && cart.length > 0 ?
         cart.map((item, index) => (
           <div key={index}>
@@ -49,7 +50,7 @@ const Cart = () => {
       <h1>cart is empty</h1>
       }
 
-      <button onClick={()=>setCart([])}>clear all </button>
+      <button onClick={()=>setCart([])} className='bg-red-600 w-[10vw] font-bold rounded-md border border-black'>clear all </button>
     </div>
   )
 }
