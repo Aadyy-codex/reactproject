@@ -35,7 +35,7 @@ const Cart = () => {
     
   return (
 
-    <div className='w-[90vw] border bg-slate-50 ml-[70px] mb-3 mt-5'>
+    <div className='w-[90vw]  ml-[70px] mb-3 mt-5'>
       {cart && cart.length > 0 ?
         cart.map((item, index) => (
           <div key={index}>
@@ -50,7 +50,7 @@ const Cart = () => {
       <h1>cart is empty</h1>
       }
 
-      <button onClick={()=>setCart([])} className='bg-red-600 w-[10vw] font-bold rounded-md border border-black'>clear all </button>
+      <button onClick={()=>setCart([])} className='bg-gray-900 w-[10vw] h-[5vh] text-xl font-bold rounded-md border border-black text-white'>clear all </button>
     </div>
   )
 }
