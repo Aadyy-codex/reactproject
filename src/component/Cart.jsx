@@ -34,7 +34,7 @@ const Cart = () => {
     }
     const grandTotal = (cart) =>{
       let total = cart.reduce((acc,val)=>acc+val.Selquantity*val.price,0)
-      return total
+      return total.toFixed(2);
     }
     
   return (
