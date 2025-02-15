@@ -32,6 +32,10 @@ const Cart = () => {
     }
 
     }
+    const grandTotal = (cart) =>{
+      let total = cart.reduce((acc,val)=>acc+val.Selquantity*val.price,0)
+      return total
+    }
     
   return (
 
@@ -44,13 +48,16 @@ const Cart = () => {
             {item.Selquantity}QTY 
             <button onClick={()=>DecQty(item,index)}>-</button>
             <button onClick={() => removeFromCart(index)}>Remove</button>
+
           </div>
         )) 
       :
-      <h1>cart is empty</h1>
+      <h1 className='text-xl'>cart is empty</h1>
       }
-
-      <button onClick={()=>setCart([])} className='bg-gray-900 w-[10vw] h-[5vh] text-xl font-bold rounded-md border border-black text-white'>clear all </button>
+      <div>
+      <h1 className='text-xl'>Total Price: {grandTotal(cart)} </h1>
+      <button onClick={()=>setCart([])} className= 'bg-gray-900 w-[10vw] h-[5vh] mt-5 text-xl font-bold rounded-md border border-black text-white'>clear all </button>
+      </div>
     </div>
   )
 }
