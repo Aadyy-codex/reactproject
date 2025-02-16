@@ -44,7 +44,7 @@ const ChildA = () => {
                 <Cart/>
                     <ChildB />
                 </store2.Provider>
-                <ChildD />
+                
             </dataStore.Provider>
         </>
     )

@@ -9,7 +9,7 @@ export const AuthProvider = ({children})=>{
     const navigate = useNavigate();
      const login = ()=>{
         setIsAuth(true);
-        navigate('/products');
+        navigate('/');
     }
     const logout = ()=>{
         setIsAuth(false);
