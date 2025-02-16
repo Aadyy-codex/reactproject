@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { dataStore, store2 } from '../store';
+import { AuthContext } from '../AuthContext';
 
 
 const ChildC = () => {
     let {products}=useContext(dataStore)
     let {cart,setCart} = useContext(store2);
+     let {logout} =useContext(AuthContext)
     console.log({setCart},cart);
     
     // console.log(products);
@@ -44,6 +46,7 @@ const ChildC = () => {
         </div>
     </div>
     </div></>))}
+    <button onClick={logout} >logout</button>
     
     </div>
   )

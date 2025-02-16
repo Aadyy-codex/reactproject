@@ -43,7 +43,6 @@ const ChildA = () => {
                 <store2.Provider value={{data1,setCart,cart}}>
                 <Cart/>
                     <ChildB />
-                    
                 </store2.Provider>
                 <ChildD />
             </dataStore.Provider>
