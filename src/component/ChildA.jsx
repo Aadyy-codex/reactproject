@@ -4,6 +4,7 @@ import ChildC from './ChildC';
 import ChildD from './ChildD';
 import { dataStore,store2 } from '../store';
 import Cart from './Cart';
+import Navbar from './Navbar';
 
 export let data1 = [{
     name: 'vishal',
@@ -37,6 +38,7 @@ const ChildA = () => {
     },[])
     return (
         <>
+        <Navbar/>
             <dataStore.Provider value={data}>
                 <store2.Provider value={{data1,setCart,cart}}>
                 <Cart/>
